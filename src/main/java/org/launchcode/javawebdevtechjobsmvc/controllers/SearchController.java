@@ -34,7 +34,7 @@ public class SearchController {
                 jobs = JobData.findAll();
                 model.addAttribute("title", "Jobs With All: ");
             } else {
-                jobs = JobData.findByColumnAndValue(searchType, searchType);
+                jobs = JobData.findByColumnAndValue(searchType, searchTerm);
                 model.addAttribute("title", "Jobs With All:" + searchTerm);
             }
         }else{
